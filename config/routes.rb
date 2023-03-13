@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get "/login", to: "sessions#new"
+  post "/login", to: "sessions#create"
+  get "/logout", to: "sessions#destroy"
+
   resources :products
   get 'demo_partials/new'
   get 'demo_partials/edit'
